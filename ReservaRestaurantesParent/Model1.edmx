@@ -1,0 +1,1007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbReservaRestauranteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Avaliacoes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPessoa" Type="int" />
+          <Property Name="IdReserva" Type="int" />
+          <Property Name="Descricao" Type="text" />
+          <Property Name="Estrelas" Type="int" />
+        </EntityType>
+        <EntityType Name="CategoriasComida">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Cidades">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="Comidas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="DescricaoCurta" Type="varchar" MaxLength="100" />
+          <Property Name="Descricao" Type="text" />
+          <Property Name="IdCategoria" Type="int" />
+        </EntityType>
+        <EntityType Name="Enderecos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cep" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdCidade" Type="int" />
+        </EntityType>
+        <EntityType Name="Ingredientes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="IngredientesComida">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdIngrediente" Type="int" />
+          <Property Name="IdComida" Type="int" />
+          <Property Name="Quantidade" Type="float" />
+        </EntityType>
+        <EntityType Name="MenuRestaurantes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdComida" Type="int" />
+          <Property Name="Tamanho" Type="varchar(max)" />
+          <Property Name="IdRestaurante" Type="int" />
+          <Property Name="Preco" Type="float" />
+        </EntityType>
+        <EntityType Name="MesasRestaurante">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRestaurante" Type="int" />
+          <Property Name="CodigoMesa" Type="varchar" MaxLength="50" />
+          <Property Name="QuantidadeCadeiras" Type="int" />
+          <Property Name="LivreReserva" Type="bit" />
+        </EntityType>
+        <EntityType Name="Pessoas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Senha" Type="varchar" MaxLength="100" />
+          <Property Name="CPF" Type="varchar" MaxLength="50" />
+          <Property Name="Nascimento" Type="datetime" />
+          <Property Name="Telefone" Type="varchar" MaxLength="50" />
+          <Property Name="DataAtualizacao" Type="datetime" />
+          <Property Name="Foto" Type="varbinary(max)" />
+          <Property Name="IdEndereco" Type="int" />
+        </EntityType>
+        <EntityType Name="PreferenciasPessoa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCategoria" Type="int" />
+          <Property Name="IdPessoa" Type="int" />
+          <Property Name="Gosta" Type="bit" />
+        </EntityType>
+        <EntityType Name="Reservas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="QuantidadePessoas" Type="int" />
+          <Property Name="IdPessoa" Type="int" />
+          <Property Name="IdRestaurante" Type="int" />
+          <Property Name="DataCancelamento" Type="datetime" />
+          <Property Name="Rubrica" Type="image" />
+        </EntityType>
+        <EntityType Name="Restaurantes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCategoria" Type="int" />
+          <Property Name="Descricao" Type="text" />
+          <Property Name="IdEndereco" Type="int" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="HoraAbertura" Type="time" Precision="7" />
+          <Property Name="HoraFechamento" Type="time" Precision="7" />
+        </EntityType>
+        <Association Name="FK_Comidas_CategoriasComida">
+          <End Role="CategoriasComida" Type="Self.CategoriasComida" Multiplicity="0..1" />
+          <End Role="Comidas" Type="Self.Comidas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriasComida">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Comidas">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Enderecos_Cidade">
+          <End Role="Cidades" Type="Self.Cidades" Multiplicity="0..1" />
+          <End Role="Enderecos" Type="Self.Enderecos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cidades">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Enderecos">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IngredientesComida_Comidas">
+          <End Role="Comidas" Type="Self.Comidas" Multiplicity="0..1" />
+          <End Role="IngredientesComida" Type="Self.IngredientesComida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comidas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="IngredientesComida">
+              <PropertyRef Name="IdComida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IngredientesComida_Ingredientes">
+          <End Role="Ingredientes" Type="Self.Ingredientes" Multiplicity="0..1" />
+          <End Role="IngredientesComida" Type="Self.IngredientesComida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredientes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="IngredientesComida">
+              <PropertyRef Name="IdIngrediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuRestaurantes_Comidas">
+          <End Role="Comidas" Type="Self.Comidas" Multiplicity="0..1" />
+          <End Role="MenuRestaurantes" Type="Self.MenuRestaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comidas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuRestaurantes">
+              <PropertyRef Name="IdComida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuRestaurantes_Restaurants">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="MenuRestaurantes" Type="Self.MenuRestaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuRestaurantes">
+              <PropertyRef Name="IdRestaurante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pessoas_Enderecos">
+          <End Role="Enderecos" Type="Self.Enderecos" Multiplicity="0..1" />
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Enderecos">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Pessoas">
+              <PropertyRef Name="IdEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreferenciasPessoa_CategoriasComida">
+          <End Role="CategoriasComida" Type="Self.CategoriasComida" Multiplicity="0..1" />
+          <End Role="PreferenciasPessoa" Type="Self.PreferenciasPessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriasComida">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PreferenciasPessoa">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreferenciasPessoa_Pessoas">
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="0..1" />
+          <End Role="PreferenciasPessoa" Type="Self.PreferenciasPessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pessoas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PreferenciasPessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservas_Pessoas">
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pessoas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservas_Restaurants">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="IdRestaurante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Restaurants_CategoriasComida">
+          <End Role="CategoriasComida" Type="Self.CategoriasComida" Multiplicity="0..1" />
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriasComida">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Restaurantes">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Restaurants_Enderecos">
+          <End Role="Enderecos" Type="Self.Enderecos" Multiplicity="0..1" />
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Enderecos">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Restaurantes">
+              <PropertyRef Name="IdEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RestaurantTables_Restaurants">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="MesasRestaurante" Type="Self.MesasRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MesasRestaurante">
+              <PropertyRef Name="IdRestaurante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Scores_Pessoas">
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="0..1" />
+          <End Role="Avaliacoes" Type="Self.Avaliacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pessoas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Avaliacoes">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Scores_Reservas">
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="0..1" />
+          <End Role="Avaliacoes" Type="Self.Avaliacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Avaliacoes">
+              <PropertyRef Name="IdReserva" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbReservaRestauranteModelStoreContainer">
+          <EntitySet Name="Avaliacoes" EntityType="Self.Avaliacoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoriasComida" EntityType="Self.CategoriasComida" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cidades" EntityType="Self.Cidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comidas" EntityType="Self.Comidas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Enderecos" EntityType="Self.Enderecos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ingredientes" EntityType="Self.Ingredientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IngredientesComida" EntityType="Self.IngredientesComida" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuRestaurantes" EntityType="Self.MenuRestaurantes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MesasRestaurante" EntityType="Self.MesasRestaurante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pessoas" EntityType="Self.Pessoas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreferenciasPessoa" EntityType="Self.PreferenciasPessoa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservas" EntityType="Self.Reservas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Restaurantes" EntityType="Self.Restaurantes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Comidas_CategoriasComida" Association="Self.FK_Comidas_CategoriasComida">
+            <End Role="CategoriasComida" EntitySet="CategoriasComida" />
+            <End Role="Comidas" EntitySet="Comidas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Enderecos_Cidade" Association="Self.FK_Enderecos_Cidade">
+            <End Role="Cidades" EntitySet="Cidades" />
+            <End Role="Enderecos" EntitySet="Enderecos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IngredientesComida_Comidas" Association="Self.FK_IngredientesComida_Comidas">
+            <End Role="Comidas" EntitySet="Comidas" />
+            <End Role="IngredientesComida" EntitySet="IngredientesComida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IngredientesComida_Ingredientes" Association="Self.FK_IngredientesComida_Ingredientes">
+            <End Role="Ingredientes" EntitySet="Ingredientes" />
+            <End Role="IngredientesComida" EntitySet="IngredientesComida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuRestaurantes_Comidas" Association="Self.FK_MenuRestaurantes_Comidas">
+            <End Role="Comidas" EntitySet="Comidas" />
+            <End Role="MenuRestaurantes" EntitySet="MenuRestaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuRestaurantes_Restaurants" Association="Self.FK_MenuRestaurantes_Restaurants">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="MenuRestaurantes" EntitySet="MenuRestaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pessoas_Enderecos" Association="Self.FK_Pessoas_Enderecos">
+            <End Role="Enderecos" EntitySet="Enderecos" />
+            <End Role="Pessoas" EntitySet="Pessoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreferenciasPessoa_CategoriasComida" Association="Self.FK_PreferenciasPessoa_CategoriasComida">
+            <End Role="CategoriasComida" EntitySet="CategoriasComida" />
+            <End Role="PreferenciasPessoa" EntitySet="PreferenciasPessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreferenciasPessoa_Pessoas" Association="Self.FK_PreferenciasPessoa_Pessoas">
+            <End Role="Pessoas" EntitySet="Pessoas" />
+            <End Role="PreferenciasPessoa" EntitySet="PreferenciasPessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservas_Pessoas" Association="Self.FK_Reservas_Pessoas">
+            <End Role="Pessoas" EntitySet="Pessoas" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservas_Restaurants" Association="Self.FK_Reservas_Restaurants">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Restaurants_CategoriasComida" Association="Self.FK_Restaurants_CategoriasComida">
+            <End Role="CategoriasComida" EntitySet="CategoriasComida" />
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Restaurants_Enderecos" Association="Self.FK_Restaurants_Enderecos">
+            <End Role="Enderecos" EntitySet="Enderecos" />
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RestaurantTables_Restaurants" Association="Self.FK_RestaurantTables_Restaurants">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="MesasRestaurante" EntitySet="MesasRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Scores_Pessoas" Association="Self.FK_Scores_Pessoas">
+            <End Role="Pessoas" EntitySet="Pessoas" />
+            <End Role="Avaliacoes" EntitySet="Avaliacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Scores_Reservas" Association="Self.FK_Scores_Reservas">
+            <End Role="Reservas" EntitySet="Reservas" />
+            <End Role="Avaliacoes" EntitySet="Avaliacoes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbReservaRestauranteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Avaliacoes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="Int32" />
+          <Property Name="IdReserva" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Estrelas" Type="Int32" />
+          <NavigationProperty Name="Pessoas" Relationship="Self.FK_Scores_Pessoas" FromRole="Avaliacoes" ToRole="Pessoas" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK_Scores_Reservas" FromRole="Avaliacoes" ToRole="Reservas" />
+        </EntityType>
+        <EntityType Name="CategoriasComida">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Comidas" Relationship="Self.FK_Comidas_CategoriasComida" FromRole="CategoriasComida" ToRole="Comidas" />
+          <NavigationProperty Name="PreferenciasPessoa" Relationship="Self.FK_PreferenciasPessoa_CategoriasComida" FromRole="CategoriasComida" ToRole="PreferenciasPessoa" />
+          <NavigationProperty Name="Restaurantes" Relationship="Self.FK_Restaurants_CategoriasComida" FromRole="CategoriasComida" ToRole="Restaurantes" />
+        </EntityType>
+        <EntityType Name="Cidades">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Enderecos" Relationship="Self.FK_Enderecos_Cidade" FromRole="Cidades" ToRole="Enderecos" />
+        </EntityType>
+        <EntityType Name="Comidas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DescricaoCurta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IdCategoria" Type="Int32" />
+          <NavigationProperty Name="CategoriasComida" Relationship="Self.FK_Comidas_CategoriasComida" FromRole="Comidas" ToRole="CategoriasComida" />
+          <NavigationProperty Name="IngredientesComida" Relationship="Self.FK_IngredientesComida_Comidas" FromRole="Comidas" ToRole="IngredientesComida" />
+          <NavigationProperty Name="MenuRestaurantes" Relationship="Self.FK_MenuRestaurantes_Comidas" FromRole="Comidas" ToRole="MenuRestaurantes" />
+        </EntityType>
+        <EntityType Name="Enderecos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cep" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IdCidade" Type="Int32" />
+          <NavigationProperty Name="Cidades" Relationship="Self.FK_Enderecos_Cidade" FromRole="Enderecos" ToRole="Cidades" />
+          <NavigationProperty Name="Pessoas" Relationship="Self.FK_Pessoas_Enderecos" FromRole="Enderecos" ToRole="Pessoas" />
+          <NavigationProperty Name="Restaurantes" Relationship="Self.FK_Restaurants_Enderecos" FromRole="Enderecos" ToRole="Restaurantes" />
+        </EntityType>
+        <EntityType Name="Ingredientes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IngredientesComida" Relationship="Self.FK_IngredientesComida_Ingredientes" FromRole="Ingredientes" ToRole="IngredientesComida" />
+        </EntityType>
+        <EntityType Name="IngredientesComida">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdIngrediente" Type="Int32" />
+          <Property Name="IdComida" Type="Int32" />
+          <Property Name="Quantidade" Type="Double" />
+          <NavigationProperty Name="Comidas" Relationship="Self.FK_IngredientesComida_Comidas" FromRole="IngredientesComida" ToRole="Comidas" />
+          <NavigationProperty Name="Ingredientes" Relationship="Self.FK_IngredientesComida_Ingredientes" FromRole="IngredientesComida" ToRole="Ingredientes" />
+        </EntityType>
+        <EntityType Name="MenuRestaurantes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdComida" Type="Int32" />
+          <Property Name="Tamanho" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IdRestaurante" Type="Int32" />
+          <Property Name="Preco" Type="Double" />
+          <NavigationProperty Name="Comidas" Relationship="Self.FK_MenuRestaurantes_Comidas" FromRole="MenuRestaurantes" ToRole="Comidas" />
+          <NavigationProperty Name="Restaurantes" Relationship="Self.FK_MenuRestaurantes_Restaurants" FromRole="MenuRestaurantes" ToRole="Restaurantes" />
+        </EntityType>
+        <EntityType Name="MesasRestaurante">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRestaurante" Type="Int32" />
+          <Property Name="CodigoMesa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QuantidadeCadeiras" Type="Int32" />
+          <Property Name="LivreReserva" Type="Boolean" />
+          <NavigationProperty Name="Restaurantes" Relationship="Self.FK_RestaurantTables_Restaurants" FromRole="MesasRestaurante" ToRole="Restaurantes" />
+        </EntityType>
+        <EntityType Name="Pessoas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Senha" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CPF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nascimento" Type="DateTime" Precision="3" />
+          <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DataAtualizacao" Type="DateTime" Precision="3" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IdEndereco" Type="Int32" />
+          <NavigationProperty Name="Avaliacoes" Relationship="Self.FK_Scores_Pessoas" FromRole="Pessoas" ToRole="Avaliacoes" />
+          <NavigationProperty Name="Enderecos" Relationship="Self.FK_Pessoas_Enderecos" FromRole="Pessoas" ToRole="Enderecos" />
+          <NavigationProperty Name="PreferenciasPessoa" Relationship="Self.FK_PreferenciasPessoa_Pessoas" FromRole="Pessoas" ToRole="PreferenciasPessoa" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Pessoas" FromRole="Pessoas" ToRole="Reservas" />
+        </EntityType>
+        <EntityType Name="PreferenciasPessoa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCategoria" Type="Int32" />
+          <Property Name="IdPessoa" Type="Int32" />
+          <Property Name="Gosta" Type="Boolean" />
+          <NavigationProperty Name="CategoriasComida" Relationship="Self.FK_PreferenciasPessoa_CategoriasComida" FromRole="PreferenciasPessoa" ToRole="CategoriasComida" />
+          <NavigationProperty Name="Pessoas" Relationship="Self.FK_PreferenciasPessoa_Pessoas" FromRole="PreferenciasPessoa" ToRole="Pessoas" />
+        </EntityType>
+        <EntityType Name="Reservas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="QuantidadePessoas" Type="Int32" />
+          <Property Name="IdPessoa" Type="Int32" />
+          <Property Name="IdRestaurante" Type="Int32" />
+          <Property Name="DataCancelamento" Type="DateTime" Precision="3" />
+          <Property Name="Rubrica" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Avaliacoes" Relationship="Self.FK_Scores_Reservas" FromRole="Reservas" ToRole="Avaliacoes" />
+          <NavigationProperty Name="Pessoas" Relationship="Self.FK_Reservas_Pessoas" FromRole="Reservas" ToRole="Pessoas" />
+          <NavigationProperty Name="Restaurantes" Relationship="Self.FK_Reservas_Restaurants" FromRole="Reservas" ToRole="Restaurantes" />
+        </EntityType>
+        <EntityType Name="Restaurantes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCategoria" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IdEndereco" Type="Int32" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HoraAbertura" Type="Time" Precision="7" />
+          <Property Name="HoraFechamento" Type="Time" Precision="7" />
+          <NavigationProperty Name="CategoriasComida" Relationship="Self.FK_Restaurants_CategoriasComida" FromRole="Restaurantes" ToRole="CategoriasComida" />
+          <NavigationProperty Name="Enderecos" Relationship="Self.FK_Restaurants_Enderecos" FromRole="Restaurantes" ToRole="Enderecos" />
+          <NavigationProperty Name="MenuRestaurantes" Relationship="Self.FK_MenuRestaurantes_Restaurants" FromRole="Restaurantes" ToRole="MenuRestaurantes" />
+          <NavigationProperty Name="MesasRestaurante" Relationship="Self.FK_RestaurantTables_Restaurants" FromRole="Restaurantes" ToRole="MesasRestaurante" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Restaurants" FromRole="Restaurantes" ToRole="Reservas" />
+        </EntityType>
+        <Association Name="FK_Scores_Pessoas">
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="0..1" />
+          <End Role="Avaliacoes" Type="Self.Avaliacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pessoas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Avaliacoes">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Scores_Reservas">
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="0..1" />
+          <End Role="Avaliacoes" Type="Self.Avaliacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Avaliacoes">
+              <PropertyRef Name="IdReserva" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comidas_CategoriasComida">
+          <End Role="CategoriasComida" Type="Self.CategoriasComida" Multiplicity="0..1" />
+          <End Role="Comidas" Type="Self.Comidas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriasComida">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Comidas">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreferenciasPessoa_CategoriasComida">
+          <End Role="CategoriasComida" Type="Self.CategoriasComida" Multiplicity="0..1" />
+          <End Role="PreferenciasPessoa" Type="Self.PreferenciasPessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriasComida">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PreferenciasPessoa">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Restaurants_CategoriasComida">
+          <End Role="CategoriasComida" Type="Self.CategoriasComida" Multiplicity="0..1" />
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriasComida">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Restaurantes">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Enderecos_Cidade">
+          <End Role="Cidades" Type="Self.Cidades" Multiplicity="0..1" />
+          <End Role="Enderecos" Type="Self.Enderecos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cidades">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Enderecos">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IngredientesComida_Comidas">
+          <End Role="Comidas" Type="Self.Comidas" Multiplicity="0..1" />
+          <End Role="IngredientesComida" Type="Self.IngredientesComida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comidas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="IngredientesComida">
+              <PropertyRef Name="IdComida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuRestaurantes_Comidas">
+          <End Role="Comidas" Type="Self.Comidas" Multiplicity="0..1" />
+          <End Role="MenuRestaurantes" Type="Self.MenuRestaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comidas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuRestaurantes">
+              <PropertyRef Name="IdComida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pessoas_Enderecos">
+          <End Role="Enderecos" Type="Self.Enderecos" Multiplicity="0..1" />
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Enderecos">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Pessoas">
+              <PropertyRef Name="IdEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Restaurants_Enderecos">
+          <End Role="Enderecos" Type="Self.Enderecos" Multiplicity="0..1" />
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Enderecos">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Restaurantes">
+              <PropertyRef Name="IdEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IngredientesComida_Ingredientes">
+          <End Role="Ingredientes" Type="Self.Ingredientes" Multiplicity="0..1" />
+          <End Role="IngredientesComida" Type="Self.IngredientesComida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredientes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="IngredientesComida">
+              <PropertyRef Name="IdIngrediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuRestaurantes_Restaurants">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="MenuRestaurantes" Type="Self.MenuRestaurantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuRestaurantes">
+              <PropertyRef Name="IdRestaurante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RestaurantTables_Restaurants">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="MesasRestaurante" Type="Self.MesasRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MesasRestaurante">
+              <PropertyRef Name="IdRestaurante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreferenciasPessoa_Pessoas">
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="0..1" />
+          <End Role="PreferenciasPessoa" Type="Self.PreferenciasPessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pessoas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PreferenciasPessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservas_Pessoas">
+          <End Role="Pessoas" Type="Self.Pessoas" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pessoas">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservas_Restaurants">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="IdRestaurante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbReservaRestauranteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Avaliacoes" EntityType="Self.Avaliacoes" />
+          <EntitySet Name="CategoriasComida" EntityType="Self.CategoriasComida" />
+          <EntitySet Name="Cidades" EntityType="Self.Cidades" />
+          <EntitySet Name="Comidas" EntityType="Self.Comidas" />
+          <EntitySet Name="Enderecos" EntityType="Self.Enderecos" />
+          <EntitySet Name="Ingredientes" EntityType="Self.Ingredientes" />
+          <EntitySet Name="IngredientesComida" EntityType="Self.IngredientesComida" />
+          <EntitySet Name="MenuRestaurantes" EntityType="Self.MenuRestaurantes" />
+          <EntitySet Name="MesasRestaurante" EntityType="Self.MesasRestaurante" />
+          <EntitySet Name="Pessoas" EntityType="Self.Pessoas" />
+          <EntitySet Name="PreferenciasPessoa" EntityType="Self.PreferenciasPessoa" />
+          <EntitySet Name="Reservas" EntityType="Self.Reservas" />
+          <EntitySet Name="Restaurantes" EntityType="Self.Restaurantes" />
+          <AssociationSet Name="FK_Scores_Pessoas" Association="Self.FK_Scores_Pessoas">
+            <End Role="Pessoas" EntitySet="Pessoas" />
+            <End Role="Avaliacoes" EntitySet="Avaliacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Scores_Reservas" Association="Self.FK_Scores_Reservas">
+            <End Role="Reservas" EntitySet="Reservas" />
+            <End Role="Avaliacoes" EntitySet="Avaliacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comidas_CategoriasComida" Association="Self.FK_Comidas_CategoriasComida">
+            <End Role="CategoriasComida" EntitySet="CategoriasComida" />
+            <End Role="Comidas" EntitySet="Comidas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreferenciasPessoa_CategoriasComida" Association="Self.FK_PreferenciasPessoa_CategoriasComida">
+            <End Role="CategoriasComida" EntitySet="CategoriasComida" />
+            <End Role="PreferenciasPessoa" EntitySet="PreferenciasPessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Restaurants_CategoriasComida" Association="Self.FK_Restaurants_CategoriasComida">
+            <End Role="CategoriasComida" EntitySet="CategoriasComida" />
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Enderecos_Cidade" Association="Self.FK_Enderecos_Cidade">
+            <End Role="Cidades" EntitySet="Cidades" />
+            <End Role="Enderecos" EntitySet="Enderecos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IngredientesComida_Comidas" Association="Self.FK_IngredientesComida_Comidas">
+            <End Role="Comidas" EntitySet="Comidas" />
+            <End Role="IngredientesComida" EntitySet="IngredientesComida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuRestaurantes_Comidas" Association="Self.FK_MenuRestaurantes_Comidas">
+            <End Role="Comidas" EntitySet="Comidas" />
+            <End Role="MenuRestaurantes" EntitySet="MenuRestaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pessoas_Enderecos" Association="Self.FK_Pessoas_Enderecos">
+            <End Role="Enderecos" EntitySet="Enderecos" />
+            <End Role="Pessoas" EntitySet="Pessoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Restaurants_Enderecos" Association="Self.FK_Restaurants_Enderecos">
+            <End Role="Enderecos" EntitySet="Enderecos" />
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IngredientesComida_Ingredientes" Association="Self.FK_IngredientesComida_Ingredientes">
+            <End Role="Ingredientes" EntitySet="Ingredientes" />
+            <End Role="IngredientesComida" EntitySet="IngredientesComida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuRestaurantes_Restaurants" Association="Self.FK_MenuRestaurantes_Restaurants">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="MenuRestaurantes" EntitySet="MenuRestaurantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RestaurantTables_Restaurants" Association="Self.FK_RestaurantTables_Restaurants">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="MesasRestaurante" EntitySet="MesasRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreferenciasPessoa_Pessoas" Association="Self.FK_PreferenciasPessoa_Pessoas">
+            <End Role="Pessoas" EntitySet="Pessoas" />
+            <End Role="PreferenciasPessoa" EntitySet="PreferenciasPessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservas_Pessoas" Association="Self.FK_Reservas_Pessoas">
+            <End Role="Pessoas" EntitySet="Pessoas" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservas_Restaurants" Association="Self.FK_Reservas_Restaurants">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbReservaRestauranteModelStoreContainer" CdmEntityContainer="dbReservaRestauranteEntities">
+          <EntitySetMapping Name="Avaliacoes">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Avaliacoes">
+              <MappingFragment StoreEntitySet="Avaliacoes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdReserva" ColumnName="IdReserva" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Estrelas" ColumnName="Estrelas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoriasComida">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.CategoriasComida">
+              <MappingFragment StoreEntitySet="CategoriasComida">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cidades">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Cidades">
+              <MappingFragment StoreEntitySet="Cidades">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comidas">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Comidas">
+              <MappingFragment StoreEntitySet="Comidas">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DescricaoCurta" ColumnName="DescricaoCurta" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Enderecos">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Enderecos">
+              <MappingFragment StoreEntitySet="Enderecos">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Cep" ColumnName="Cep" />
+                <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ingredientes">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Ingredientes">
+              <MappingFragment StoreEntitySet="Ingredientes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IngredientesComida">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.IngredientesComida">
+              <MappingFragment StoreEntitySet="IngredientesComida">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+                <ScalarProperty Name="IdComida" ColumnName="IdComida" />
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuRestaurantes">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.MenuRestaurantes">
+              <MappingFragment StoreEntitySet="MenuRestaurantes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IdComida" ColumnName="IdComida" />
+                <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+                <ScalarProperty Name="IdRestaurante" ColumnName="IdRestaurante" />
+                <ScalarProperty Name="Preco" ColumnName="Preco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MesasRestaurante">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.MesasRestaurante">
+              <MappingFragment StoreEntitySet="MesasRestaurante">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IdRestaurante" ColumnName="IdRestaurante" />
+                <ScalarProperty Name="CodigoMesa" ColumnName="CodigoMesa" />
+                <ScalarProperty Name="QuantidadeCadeiras" ColumnName="QuantidadeCadeiras" />
+                <ScalarProperty Name="LivreReserva" ColumnName="LivreReserva" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pessoas">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Pessoas">
+              <MappingFragment StoreEntitySet="Pessoas">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Nascimento" ColumnName="Nascimento" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="DataAtualizacao" ColumnName="DataAtualizacao" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PreferenciasPessoa">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.PreferenciasPessoa">
+              <MappingFragment StoreEntitySet="PreferenciasPessoa">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="Gosta" ColumnName="Gosta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservas">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Reservas">
+              <MappingFragment StoreEntitySet="Reservas">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="QuantidadePessoas" ColumnName="QuantidadePessoas" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdRestaurante" ColumnName="IdRestaurante" />
+                <ScalarProperty Name="DataCancelamento" ColumnName="DataCancelamento" />
+                <ScalarProperty Name="Rubrica" ColumnName="Rubrica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Restaurantes">
+            <EntityTypeMapping TypeName="dbReservaRestauranteModel.Restaurantes">
+              <MappingFragment StoreEntitySet="Restaurantes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="HoraAbertura" ColumnName="HoraAbertura" />
+                <ScalarProperty Name="HoraFechamento" ColumnName="HoraFechamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

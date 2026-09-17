@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbReservaRestauranteModelStoreContainer" CdmEntityContainer="dbReservaRestauranteEntities">
+    <EntitySetMapping Name="Avaliacoes">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Avaliacoes">
+        <MappingFragment StoreEntitySet="Avaliacoes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="IdReserva" ColumnName="IdReserva" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Estrelas" ColumnName="Estrelas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriasComida">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.CategoriasComida">
+        <MappingFragment StoreEntitySet="CategoriasComida">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cidades">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Cidades">
+        <MappingFragment StoreEntitySet="Cidades">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comidas">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Comidas">
+        <MappingFragment StoreEntitySet="Comidas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DescricaoCurta" ColumnName="DescricaoCurta" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enderecos">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Enderecos">
+        <MappingFragment StoreEntitySet="Enderecos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Cep" ColumnName="Cep" />
+          <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingredientes">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Ingredientes">
+        <MappingFragment StoreEntitySet="Ingredientes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngredientesComida">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.IngredientesComida">
+        <MappingFragment StoreEntitySet="IngredientesComida">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdIngrediente" ColumnName="IdIngrediente" />
+          <ScalarProperty Name="IdComida" ColumnName="IdComida" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuRestaurantes">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.MenuRestaurantes">
+        <MappingFragment StoreEntitySet="MenuRestaurantes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdComida" ColumnName="IdComida" />
+          <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+          <ScalarProperty Name="IdRestaurante" ColumnName="IdRestaurante" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MesasRestaurante">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.MesasRestaurante">
+        <MappingFragment StoreEntitySet="MesasRestaurante">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdRestaurante" ColumnName="IdRestaurante" />
+          <ScalarProperty Name="CodigoMesa" ColumnName="CodigoMesa" />
+          <ScalarProperty Name="QuantidadeCadeiras" ColumnName="QuantidadeCadeiras" />
+          <ScalarProperty Name="LivreReserva" ColumnName="LivreReserva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoas">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Pessoas">
+        <MappingFragment StoreEntitySet="Pessoas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nascimento" ColumnName="Nascimento" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="DataAtualizacao" ColumnName="DataAtualizacao" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreferenciasPessoa">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.PreferenciasPessoa">
+        <MappingFragment StoreEntitySet="PreferenciasPessoa">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="Gosta" ColumnName="Gosta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservas">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Reservas">
+        <MappingFragment StoreEntitySet="Reservas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="QuantidadePessoas" ColumnName="QuantidadePessoas" />
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="IdRestaurante" ColumnName="IdRestaurante" />
+          <ScalarProperty Name="DataCancelamento" ColumnName="DataCancelamento" />
+          <ScalarProperty Name="Rubrica" ColumnName="Rubrica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurantes">
+      <EntityTypeMapping TypeName="dbReservaRestauranteModel.Restaurantes">
+        <MappingFragment StoreEntitySet="Restaurantes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="HoraAbertura" ColumnName="HoraAbertura" />
+          <ScalarProperty Name="HoraFechamento" ColumnName="HoraFechamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

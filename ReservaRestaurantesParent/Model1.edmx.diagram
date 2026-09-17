@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="984da9bdbff1489c809f4b583cce9def" Name="Diagram1">
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Avaliacoes" Width="1.5" PointX="10.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.CategoriasComida" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Cidades" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Comidas" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Enderecos" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Ingredientes" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.IngredientesComida" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.MenuRestaurantes" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.MesasRestaurante" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Pessoas" Width="1.5" PointX="6" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.PreferenciasPessoa" Width="1.5" PointX="6" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Reservas" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbReservaRestauranteModel.Restaurantes" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Scores_Pessoas" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Scores_Reservas" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Comidas_CategoriasComida" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_PreferenciasPessoa_CategoriasComida" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Restaurants_CategoriasComida" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Enderecos_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_IngredientesComida_Comidas" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_MenuRestaurantes_Comidas" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Pessoas_Enderecos" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Restaurants_Enderecos" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_IngredientesComida_Ingredientes" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_MenuRestaurantes_Restaurants" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_RestaurantTables_Restaurants" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_PreferenciasPessoa_Pessoas" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Reservas_Pessoas" ManuallyRouted="false" />
+        <AssociationConnector Association="dbReservaRestauranteModel.FK_Reservas_Restaurants" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
