@@ -51,6 +51,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +74,8 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox3);
@@ -81,6 +85,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Size = new System.Drawing.Size(1104, 576);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.textBox1, 0);
             this.panel1.Controls.SetChildIndex(this.label2, 0);
@@ -89,6 +94,8 @@
             this.panel1.Controls.SetChildIndex(this.textBox3, 0);
             this.panel1.Controls.SetChildIndex(this.label4, 0);
             this.panel1.Controls.SetChildIndex(this.textBox4, 0);
+            this.panel1.Controls.SetChildIndex(this.label13, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox7, 0);
             this.panel1.Controls.SetChildIndex(this.label5, 0);
             this.panel1.Controls.SetChildIndex(this.label9, 0);
             this.panel1.Controls.SetChildIndex(this.label10, 0);
@@ -231,7 +238,7 @@
             this.checkBox1.AccessibleName = "";
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(36, 518);
+            this.checkBox1.Location = new System.Drawing.Point(36, 513);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(196, 24);
             this.checkBox1.TabIndex = 6;
@@ -257,6 +264,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(825, 182);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(165, 152);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
@@ -279,6 +287,7 @@
             this.button2.Text = "Selecionar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label9
             // 
@@ -332,6 +341,23 @@
             this.label12.Text = "Reserve!";
             this.label12.Click += new System.EventHandler(this.label9_Click);
             // 
+            // label13
+            // 
+            this.label13.AccessibleName = "credencial";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(33, 399);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Senha";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(36, 427);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(348, 20);
+            this.textBox7.TabIndex = 2;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,5 +397,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -50,7 +50,7 @@ namespace ReservaRestaurantesParent
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Home().Show();
+            //new Home().Show();
             this.Close();
         }
     }

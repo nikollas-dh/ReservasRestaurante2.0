@@ -15,7 +15,7 @@ namespace ReservaRestaurantesParent
     public partial class Home : Parent
     {
         WindowsMediaPlayer audio = new WindowsMediaPlayer();
-        public Home()
+        public Home(Pessoas us)
         {
             InitializeComponent();
         }
