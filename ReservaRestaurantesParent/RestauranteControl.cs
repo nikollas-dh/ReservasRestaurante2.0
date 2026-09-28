@@ -17,6 +17,7 @@ namespace ReservaRestaurantesParent
         {
             get { return label1.Text; }
         }
+        int id;
         public RestauranteControl()
         {
             InitializeComponent();
@@ -37,11 +38,17 @@ namespace ReservaRestaurantesParent
             var caminho = Path.GetFullPath(caminhoLong);
 
             pictureBox1.Image = Image.FromFile(caminho);
+            id = restaurantes.ID;
         }
 
         private void RestauranteControl_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new ReservasPage(id).Show();
         }
     }
 }

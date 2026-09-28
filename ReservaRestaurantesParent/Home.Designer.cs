@@ -31,11 +31,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.textBox1);
@@ -44,6 +46,7 @@
             this.panel1.Controls.SetChildIndex(this.textBox1, 0);
             this.panel1.Controls.SetChildIndex(this.linkLabel1, 0);
             this.panel1.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.panel1.Controls.SetChildIndex(this.label1, 0);
             // 
             // textBox1
             // 
@@ -51,7 +54,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(461, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "  Digite o nome do restaurante";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // linkLabel1
@@ -72,6 +74,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(647, 569);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(248, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "  Digite o nome do restaurante";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }

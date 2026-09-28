@@ -23,3 +23,4 @@ D:\C#\ReservaRestaurantesParent\ReservaRestaurantesParent\obj\Debug\ReservaResta
 D:\C#\ReservaRestaurantesParent\ReservaRestaurantesParent\obj\Debug\ReservaR.BB6E80EE.Up2Date
 D:\C#\ReservaRestaurantesParent\ReservaRestaurantesParent\obj\Debug\ReservaRestaurantesParent.exe
 D:\C#\ReservaRestaurantesParent\ReservaRestaurantesParent\obj\Debug\ReservaRestaurantesParent.pdb
+D:\C#\ReservaRestaurantesParent\ReservaRestaurantesParent\obj\Debug\ReservaRestaurantesParent.ReservasPage.resources
