@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\C#\\ReservaRestaurantesParent\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\reservaspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\reservaspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\reservaspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\reservaspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -15,32 +19,32 @@
       "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\restaurantecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\reservaspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\reservaspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\restaurantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\restaurantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\parent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\parent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|d:\\c#\\reservarestaurantesparent\\reservarestaurantesparent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|solutionrelative:reservarestaurantesparent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAC9AB90-492D-497A-9AC0-50075E7EFFB2}|ReservaRestaurantesParent\\ReservaRestaurantesParent.csproj|D:\\C#\\ReservaRestaurantesParent\\reservarestaurantesparent\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,59 +78,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Welcome.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Welcome.cs",
-              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Welcome.cs",
-              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Welcome.cs [Design]",
-              "RelativeToolTip": "ReservaRestaurantesParent\\Welcome.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "RestauranteControl.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\RestauranteControl.cs",
+              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\RestauranteControl.cs",
+              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\RestauranteControl.cs [Design]",
+              "RelativeToolTip": "ReservaRestaurantesParent\\RestauranteControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T20:49:09.752Z",
+              "WhenOpened": "2026-09-28T21:02:01.954Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ReservasPage.cs [Design]",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\ReservasPage.cs",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\ReservasPage.cs",
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\ReservasPage.cs [Design]",
               "RelativeToolTip": "ReservaRestaurantesParent\\ReservasPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T20:36:21.406Z",
+              "WhenOpened": "2026-09-28T20:53:43.791Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Home.cs [Design]",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Home.cs",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Home.cs",
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Home.cs [Design]",
               "RelativeToolTip": "ReservaRestaurantesParent\\Home.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T17:58:13.363Z",
+              "WhenOpened": "2026-09-28T20:53:40.938Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Form1.cs",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Form1.cs",
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Form1.cs [Design]",
               "RelativeToolTip": "ReservaRestaurantesParent\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T17:58:11.246Z",
+              "WhenOpened": "2026-09-28T20:53:39.796Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Program.cs",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Program.cs",
@@ -144,64 +144,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RestauranteControl.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\RestauranteControl.cs",
-              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\RestauranteControl.cs",
-              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\RestauranteControl.cs [Design]",
-              "RelativeToolTip": "ReservaRestaurantesParent\\RestauranteControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T20:35:47.435Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "RestauranteControl.cs",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\RestauranteControl.cs",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\RestauranteControl.cs",
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\RestauranteControl.cs",
               "RelativeToolTip": "ReservaRestaurantesParent\\RestauranteControl.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvzIAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAgwCcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-17T20:55:56.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cadastro.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Cadastro.cs",
-              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Cadastro.cs",
-              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Cadastro.cs [Design]",
-              "RelativeToolTip": "ReservaRestaurantesParent\\Cadastro.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T18:00:33.054Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "ReservasPage.cs",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\ReservasPage.cs",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\ReservasPage.cs",
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\ReservasPage.cs",
               "RelativeToolTip": "ReservaRestaurantesParent\\ReservasPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA6wCwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T20:36:46.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Cadastro.cs",
-              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Cadastro.cs",
-              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Cadastro.cs",
-              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Cadastro.cs",
-              "RelativeToolTip": "ReservaRestaurantesParent\\Cadastro.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAUwKAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T20:27:00.485Z",
               "EditorCaption": ""
             },
             {
@@ -213,20 +176,70 @@
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Parent.cs [Design]",
               "RelativeToolTip": "ReservaRestaurantesParent\\Parent.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T20:33:00.067Z",
+              "WhenOpened": "2026-09-28T20:53:41.88Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\packages.config",
+              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\packages.config",
+              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\packages.config",
+              "RelativeToolTip": "ReservaRestaurantesParent\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-09-28T20:57:19.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Form1.cs",
+              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Form1.cs",
+              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Form1.cs",
+              "RelativeToolTip": "ReservaRestaurantesParent\\Form1.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwEEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T18:34:34.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Restaurantes.cs",
+              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Restaurantes.cs",
+              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Restaurantes.cs",
+              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Restaurantes.cs",
+              "RelativeToolTip": "ReservaRestaurantesParent\\Restaurantes.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T20:57:21.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Cadastro.cs",
+              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Cadastro.cs",
+              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Cadastro.cs",
+              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Cadastro.cs",
+              "RelativeToolTip": "ReservaRestaurantesParent\\Cadastro.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAUwKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T20:27:00.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Model1.edmx",
               "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Model1.edmx",
               "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Model1.edmx [Diagram1]",
               "RelativeToolTip": "ReservaRestaurantesParent\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2026-09-17T20:51:52.119Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2026-09-17T20:51:52.119Z"
             },
             {
               "$type": "Document",
@@ -239,19 +252,6 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAqwDkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-17T18:30:47.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Form1.cs",
-              "RelativeDocumentMoniker": "ReservaRestaurantesParent\\Form1.cs",
-              "ToolTip": "D:\\C#\\ReservaRestaurantesParent\\ReservaRestaurantesParent\\Form1.cs",
-              "RelativeToolTip": "ReservaRestaurantesParent\\Form1.cs",
-              "ViewState": "AgIAABAAAACAQukLIY8mwD0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T18:34:34.983Z",
               "EditorCaption": ""
             },
             {
@@ -277,8 +277,7 @@
               "RelativeToolTip": "ReservaRestaurantesParent\\Welcome.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T20:14:57.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T20:14:57.092Z"
             },
             {
               "$type": "Document",

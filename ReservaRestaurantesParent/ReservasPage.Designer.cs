@@ -66,6 +66,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Size = new System.Drawing.Size(994, 583);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.label2, 0);
             this.panel1.Controls.SetChildIndex(this.label3, 0);
@@ -99,6 +100,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(288, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -106,6 +108,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(58, 222);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(149, 130);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -192,6 +195,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label12
             // 
@@ -248,6 +252,7 @@
             this.ClientSize = new System.Drawing.Size(994, 583);
             this.Name = "ReservasPage";
             this.Text = "ReservasPages";
+            this.Load += new System.EventHandler(this.ReservasPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

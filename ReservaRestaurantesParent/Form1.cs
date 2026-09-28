@@ -63,6 +63,7 @@ namespace ReservaRestaurantesParent
             if(us == null) 
             {
                 MessageBox.Show("Email ou senha incorretos.");
+                return;
             }
             MessageBox.Show("Login realizado com sucesso!");
 
