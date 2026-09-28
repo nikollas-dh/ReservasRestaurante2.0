@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ReservaRestaurantesParent
+{
+    public partial class FrmLogin : Parent
+    {
+        public FrmLogin()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new FrmCadastro().Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string email = textBox1.Text;
+            string senha = textBox2.Text;
+
+            var sha = SHA256.Create();
+            var hash = sha.ComputeHash(Encoding.UTF8.GetBytes(senha));
+
+            string senhaHash = BitConverter.ToString(hash).Replace("-", "");
+
+            var us = ct.Pessoas.FirstOrDefault(p=>p.Email==email && p.Senha==senhaHash);
+            if(us == null) 
+            {
+                MessageBox.Show("Email ou senha incorretos.");
+                return;
+            }
+            MessageBox.Show("Login realizado com sucesso!");
+
+            new FrmPrincipal(us).Show();
+            this.Close();
+        }
+    }
+}
