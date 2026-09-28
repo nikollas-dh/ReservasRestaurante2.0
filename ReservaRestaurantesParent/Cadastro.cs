@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -67,18 +68,24 @@ namespace ReservaRestaurantesParent
             endereco.Cep = label6.Text;
             endereco.IdCidade = cidade.ID;
             ct.Enderecos.Add(endereco);
+            ct.SaveChanges();
 
+            var sha = SHA256.Create();
+            var hash = sha.ComputeHash(Encoding.UTF8.GetBytes(textBox7.Text));
 
             Pessoas us = new Pessoas();
-
             us.Nome = textBox1.Text;
             us.Telefone= textBox2.Text;
             us.Email=textBox3.Text;
-            us.Senha=textBox7.Text;
+            us.Senha = BitConverter.ToString(hash).Replace("-", ""); 
             us.CPF = textBox5.Text;
             us.IdEndereco = endereco.ID ;
-            ct.Pessoas.Add(us);
             us.Foto = ms.ToArray();
+            us.Nascimento = dateTimePicker1.Value;
+
+            ct.Pessoas.Add(us);
+            ct.SaveChanges();
+
             new Home(us).Show();
             this.Close();
         }
