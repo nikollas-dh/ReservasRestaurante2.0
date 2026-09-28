@@ -52,6 +52,11 @@ namespace ReservaRestaurantesParent
                 MessageBox.Show("CPF deve conter 11 digitos.");
                 return;
             }
+            if (!ValidarCEP(textBox6.Text)) 
+            {
+                MessageBox.Show("CEP deve conter 8 digitos");
+                return;
+            }
             if (!checkBox1.Checked) 
             {
                 MessageBox.Show("Para seguir com a aplicação é necessário aceitar os termos.");
@@ -59,13 +64,13 @@ namespace ReservaRestaurantesParent
             }
 
             Cidades cidade = new Cidades();
-            cidade.Nome = label4.Text;
+            cidade.Nome = textBox4.Text;
             ct.Cidades.Add(cidade);
             ct.SaveChanges();
 
 
             Enderecos endereco = new Enderecos();
-            endereco.Cep = label6.Text;
+            endereco.Cep = textBox6.Text;
             endereco.IdCidade = cidade.ID;
             ct.Enderecos.Add(endereco);
             ct.SaveChanges();
@@ -88,6 +93,13 @@ namespace ReservaRestaurantesParent
 
             new Home(us).Show();
             this.Close();
+        }
+
+        private bool ValidarCEP(string text)
+        {
+            string regex = @"^\d{8}$";
+            if (Regex.IsMatch(text, regex)) return true;
+            else return false;
         }
 
         private bool ValidarEmail(string text)
