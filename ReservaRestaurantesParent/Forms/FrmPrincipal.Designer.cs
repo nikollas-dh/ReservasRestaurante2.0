@@ -41,7 +41,7 @@
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Size = new System.Drawing.Size(1022, 601);
+            this.panel1.Size = new System.Drawing.Size(1022, 723);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Controls.SetChildIndex(this.textBox1, 0);
             this.panel1.Controls.SetChildIndex(this.linkLabel1, 0);
@@ -84,13 +84,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "  Digite o nome do restaurante";
             // 
-            // Home
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 601);
-            this.Name = "Home";
-            this.Text = "Home";
+            this.ClientSize = new System.Drawing.Size(1022, 723);
+            this.Name = "FrmPrincipal";
+            this.Text = "Pesquisa";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

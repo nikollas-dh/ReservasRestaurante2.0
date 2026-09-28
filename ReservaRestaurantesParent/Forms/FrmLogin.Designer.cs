@@ -92,7 +92,7 @@
             this.textBox1.Location = new System.Drawing.Point(97, 191);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(331, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 0;
             this.textBox1.UseWaitCursor = true;
             // 
             // textBox2
@@ -100,7 +100,7 @@
             this.textBox2.Location = new System.Drawing.Point(97, 230);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(331, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBox2.TabIndex = 1;
             this.textBox2.UseWaitCursor = true;
             // 
             // button1
@@ -147,18 +147,18 @@
             this.checkBox1.Location = new System.Drawing.Point(97, 269);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(147, 24);
-            this.checkBox1.TabIndex = 5;
+            this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Manter conectado";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.UseWaitCursor = true;
             // 
-            // Form1
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 653);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FrmLogin";
+            this.Text = "Autenticação";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

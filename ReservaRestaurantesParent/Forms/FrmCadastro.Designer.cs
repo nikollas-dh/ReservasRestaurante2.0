@@ -127,7 +127,7 @@
             this.textBox1.Location = new System.Drawing.Point(36, 168);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(348, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -144,7 +144,7 @@
             this.textBox2.Location = new System.Drawing.Point(36, 234);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(348, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBox2.TabIndex = 1;
             // 
             // label3
             // 
@@ -178,7 +178,7 @@
             this.textBox4.Location = new System.Drawing.Point(36, 366);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(348, 20);
-            this.textBox4.TabIndex = 2;
+            this.textBox4.TabIndex = 3;
             // 
             // label5
             // 
@@ -195,7 +195,7 @@
             this.textBox5.Location = new System.Drawing.Point(423, 234);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(348, 20);
-            this.textBox5.TabIndex = 2;
+            this.textBox5.TabIndex = 5;
             // 
             // label6
             // 
@@ -212,7 +212,7 @@
             this.textBox6.Location = new System.Drawing.Point(423, 366);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(348, 20);
-            this.textBox6.TabIndex = 2;
+            this.textBox6.TabIndex = 7;
             // 
             // label7
             // 
@@ -231,7 +231,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(423, 301);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(348, 24);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // checkBox1
             // 
@@ -241,7 +241,7 @@
             this.checkBox1.Location = new System.Drawing.Point(36, 513);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(196, 24);
-            this.checkBox1.TabIndex = 6;
+            this.checkBox1.TabIndex = 9;
             this.checkBox1.Text = "Concordar com os termos";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.UseWaitCursor = true;
@@ -252,7 +252,7 @@
             this.button1.Location = new System.Drawing.Point(825, 505);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 37);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Continuar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.UseWaitCursor = true;
@@ -283,7 +283,7 @@
             this.button2.Location = new System.Drawing.Point(847, 357);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 37);
-            this.button2.TabIndex = 7;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Selecionar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.UseWaitCursor = true;
@@ -356,15 +356,15 @@
             this.textBox7.Location = new System.Drawing.Point(36, 427);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(348, 20);
-            this.textBox7.TabIndex = 2;
+            this.textBox7.TabIndex = 4;
             // 
-            // Cadastro
+            // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 576);
-            this.Name = "Cadastro";
-            this.Text = "Cadastro";
+            this.Name = "FrmCadastro";
+            this.Text = "Novo Usuário";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
