@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace ReservaRestaurantesParent
 {
-    public partial class FrmReservas : Parent
+    public partial class FrmNovaReserva : Parent
     {
         Restaurantes r;
-        public FrmReservas(int id)
+        public FrmNovaReserva(int id)
         {
             InitializeComponent();
             var res = ct.Restaurantes.Where(o=>o.ID == id).FirstOrDefault();

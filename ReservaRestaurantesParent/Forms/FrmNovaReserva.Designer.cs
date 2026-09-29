@@ -1,6 +1,6 @@
 ﻿namespace ReservaRestaurantesParent
 {
-    partial class FrmReservas
+    partial class FrmNovaReserva
     {
         /// <summary>
         /// Required designer variable.

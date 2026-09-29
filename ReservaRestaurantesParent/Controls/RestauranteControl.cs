@@ -1,4 +1,5 @@
-﻿using ReservaRestaurantesParent.Models;
+﻿using ReservaRestaurantesParent.Forms;
+using ReservaRestaurantesParent.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace ReservaRestaurantesParent
             get { return label1.Text; }
         }
         int id;
+        Restaurantes r;
         public RestauranteControl()
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace ReservaRestaurantesParent
 
             pictureBox1.Image = Image.FromFile(caminho);
             id = restaurantes.ID;
+            r = restaurantes;
         }
 
         private void RestauranteControl_Load(object sender, EventArgs e)
@@ -49,7 +52,17 @@ namespace ReservaRestaurantesParent
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new FrmReservas(id).Show();
+            new FrmNovaReserva(id).Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Click(object sender, EventArgs e)
+        {
+            new FrmDetalhesRestaurante(r).Show();
         }
     }
 }

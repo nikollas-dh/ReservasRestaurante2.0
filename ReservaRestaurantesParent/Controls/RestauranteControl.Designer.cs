@@ -44,6 +44,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -87,6 +88,7 @@
             this.Name = "RestauranteControl";
             this.Size = new System.Drawing.Size(310, 390);
             this.Load += new System.EventHandler(this.RestauranteControl_Load);
+            this.Click += new System.EventHandler(this.Menu_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

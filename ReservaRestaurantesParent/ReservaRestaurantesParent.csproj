@@ -60,6 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\PratoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PratoControl.Designer.cs">
+      <DependentUpon>PratoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetalhesRestaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetalhesRestaurante.Designer.cs">
+      <DependentUpon>FrmDetalhesRestaurante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Avaliacoes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -137,11 +149,11 @@
     <Compile Include="Models\Reservas.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmReservas.cs">
+    <Compile Include="Forms\FrmNovaReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmReservas.Designer.cs">
-      <DependentUpon>FrmReservas.cs</DependentUpon>
+    <Compile Include="Forms\FrmNovaReserva.Designer.cs">
+      <DependentUpon>FrmNovaReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\RestauranteControl.cs">
       <SubType>UserControl</SubType>
@@ -158,8 +170,14 @@
     <Compile Include="Forms\FrmWelcome.Designer.cs">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\PratoControl.resx">
+      <DependentUpon>PratoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetalhesRestaurante.resx">
+      <DependentUpon>FrmDetalhesRestaurante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -179,8 +197,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\FrmReservas.resx">
-      <DependentUpon>FrmReservas.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmNovaReserva.resx">
+      <DependentUpon>FrmNovaReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\RestauranteControl.resx">
       <DependentUpon>RestauranteControl.cs</DependentUpon>
